@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html xmlns:shiro="http://www.ncss.cn/thymeleaf/shiro" xmlns="http://www.w3.org/1999/html"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="全国大学生创业服务网(cy.ncss.org.cn)，是中华人民共和国教育部唯一专门宣传、鼓励、引导、帮助大学生创业的官方网站。">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://t1.chei.com.cn/">
+  <link rel="dns-prefetch" href="https://t2.chei.com.cn/">
+  <link rel="dns-prefetch" href="https://t3.chei.com.cn/">
+  <link rel="dns-prefetch" href="https://t4.chei.com.cn/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="max-age=3600">
+  <!-- <meta HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+  <meta HTTP-EQUIV="Expires" CONTENT="0" /> -->
+  <link rel="icon" href="https://t4.chei.com.cn/ncss/cy/web/img/favicon.ico">
+  <link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/bootstrap.css">
+  <link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/common-1.css">
+  <link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/modal-1.css">
+  <title>编辑项目</title>
+
+  <script async="" src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/analytics.js"></script><script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-105074615-4', 'auto');
+    ga('send', 'pageview');
+  </script>
+<link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/iconfont-1.css"><link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/bootstrapValidator.css"><link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/select2.css"><link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/new-main.css"><link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/cropper.css"><link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/bootstrap-datetimepicker.css"><link rel="stylesheet" href="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/new-edit-project.css"></head>
+
+
+
+
+
+
+
+
+<body>
+	<!-- 页头开始 -->
+	<div>
+    <div class="mobile-tip hidden" style="text-align:center;width:1180px;font-size:32px;padding:10px 0;margin:0 auto;color:darkred;">为了获得更好的体验，请使用电脑版浏览器。</div>
+    <div class="header">
+      <div class="container pr0 pl0">
+        <div class="row">
+          <div class="col-xs-3 header-left">
+            <a href="https://cy.ncss.cn/" class="top-logo">
+            </a>
+          </div>
+          <div class="col-xs-6 header-mid">
+            <div class="header-middle text-center">
+              <a href="https://cy.ncss.cn/">首页</a> <a class="drop-hover" href="javascript:void(0);"> 投融资 <span class="caret"></span>
+              </a>
+              <a target="_blank" href="https://cy.ncss.cn/ap/index">创业孵化</a>
+              <a target="_blank" href="https://cy.ncss.cn/redactivity/index">筑梦之旅</a>
+              <a target="_blank" href="https://cy.ncss.cn/en">International Group</a>
+              <!-- 下拉菜单 -->
+              <div class="drop-menu hidden">
+                <div class="ctrl-show"></div>
+                <div class="triangle"></div>
+                <div class="triangle-white"></div>
+                <p>
+                  <a class="rongzi" href="https://cy.ncss.cn/searchinvestor">寻找融资</a>
+                </p>
+                <p class="p1">
+                  <a href="https://cy.ncss.cn/search/projects">寻找项目</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3 text-right header-right line-center" style="padding-top:5px;position: relative;">
+            <a href="https://cy.ncss.cn/userhome" class="userpic"> <img alt="" onerror="javascript:this.src='//t2.chei.com.cn/ncss/cy/web/img/head_none.png'" src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_002.jfif">  
+            </a>
+            <a href="https://cy.ncss.cn/userhome" style="text-align: center;line-height: 16px;" class="username">
+                郭海滨
+                <span style="display: block;">个人中心</span>
+            </a> <span class="header-space">|</span> <a href="https://cy.ncss.cn/logout" class="logout">退出</a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal fade bs-prompt-modal-sm" id="prompts" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-body project-modal-text">
+              <div class="project-modal-info" style="padding: 30px 0 0">
+                <p class="project-modal-del del-html text-center" id="prompt-text">请使用IE9以上版本、谷歌等浏览器以获得更好体验。</p>
+                <div class="form-group clearfix modal-confirm"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+	<!--主体内容-->
+	<div class="container">
+		<h2 class="h2-title">
+			编辑项目<small style="margin-left: 20px;font-size: 14px;"><span style="color:#e57372">温馨提示：</span>因网站提高安全问题等级排查，本页所填写的内容包括某些英文字母或特殊字符将导致无法通过校验，请仔细核查并修改后再提交。给您带来不便敬请谅解。</small>
+		</h2>
+		<form class="form-horizontal form-project bv-form" id="mainForm" role="form" action="/talentproject/edit" method="post" enctype="multipart/form-data" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+		<input id="csrf-talentproject-edit" type="hidden" value="c03ea8422acbedd70f7793bf1de23806" name="cprmcsrf">
+			<a href="#topError" class="hidden">aa</a>
+			<div class="project-block">
+				<div>
+					<h2 class="h2-title">基本信息</h2>
+					<div class="form-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">项目logo</span>
+						</div>
+						<div class="group-content clearfix">
+							<div class="default-logo pull-left">
+								<div id="getCroppedCanvasModal" class="hide"></div>
+								
+								<img id="userPic" onerror="javascript:this.src='//t4.chei.com.cn/ncss/cy/web/img/project-img2.png';" src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_004.jfif">
+								
+								 <input id="imgX" type="hidden" name="xOffset">
+								<input id="imgY" type="hidden" name="yOffset"> <input id="imgWidth" type="hidden" name="width"> <input id="imgHeight" type="hidden" name="height">
+							</div>
+							<div class="pull-left" style="margin-top:52px;margin-left:10px;">
+								<a class="file-input" id="checkimg">点击上传 <input id="inputImage" name="logoFile" type="file"> <input type="text" id="photo" class="sr-only" name="text">
+								</a>
+								<span class="upload-tip">仅支持JPG、GIF、PNG格式，文件小于300k。</span>
+							</div>
+							<small class="help-block hide" id="errorMes">请选择正确的图片文件！</small>
+							
+						</div>
+					</div>
+					<!-- 头像模态框 -->
+					<div class="modal fade imageModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="row">
+									<div class="col-md-9">
+										<h6 class="page-header" style="margin: 15px 5px 5px">项目logo:</h6>
+										<div class="img-container">
+											<img id="imageHead" alt="Picture" onerror="javascript:this.src='//t4.chei.com.cn/ncss/cy/web/img/project-img2.png';" src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_004.jfif" class="cropper-hidden">
+											
+											
+
+										<div class="cropper-container cropper-bg" style="width: 666px; height: 466px;"><div class="cropper-canvas" style="width: 466px; height: 466px; left: 100px; top: 0px;"><img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_004.jfif" class="" style="width: 466px; height: 466px; margin-left: 0px; margin-top: 0px; transform: none;"></div><div class="cropper-drag-box cropper-modal cropper-crop" data-drag="move"></div><div class="cropper-crop-box" style="width: 372.8px; height: 372.8px; left: 146.6px; top: 46.6px;"><span class="cropper-view-box"><img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_004.jfif" style="width: 466px; height: 466px; margin-left: -46.6px; margin-top: -46.6px; transform: none;"></span><span class="cropper-dashed dashed-h"></span><span class="cropper-dashed dashed-v"></span><span class="cropper-face" data-drag="all"></span><span class="cropper-line line-e" data-drag="e"></span><span class="cropper-line line-n" data-drag="n"></span><span class="cropper-line line-w" data-drag="w"></span><span class="cropper-line line-s" data-drag="s"></span><span class="cropper-point point-e" data-drag="e"></span><span class="cropper-point point-n" data-drag="n"></span><span class="cropper-point point-w" data-drag="w"></span><span class="cropper-point point-s" data-drag="s"></span><span class="cropper-point point-ne" data-drag="ne"></span><span class="cropper-point point-nw" data-drag="nw"></span><span class="cropper-point point-sw" data-drag="sw"></span><span class="cropper-point point-se" data-drag="se"></span></div></div></div>
+									</div>
+									<div class="col-md-3">
+										<div class="docs-preview clearfix" style="margin-top: 10px;">
+											<div class="img-preview preview-lg" style="width: 148px; height: 148px;"><img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_004.jfif" style="display: block; width: 185px; min-width: 0px !important; min-height: 0px !important; max-width: none !important; max-height: none !important; height: 185px; margin-left: -18.5px; margin-top: -18.5px; transform: none;"></div>
+											<div class="img-preview preview-md" style="width: 78px; height: 78px;"><img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_004.jfif" style="display: block; width: 97.5px; min-width: 0px !important; min-height: 0px !important; max-width: none !important; max-height: none !important; height: 97.5px; margin-left: -9.75px; margin-top: -9.75px; transform: none;"></div>
+											<div class="img-preview preview-sm" style="width: 39px; height: 39px;"><img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_004.jfif" style="display: block; width: 48.75px; min-width: 0px !important; min-height: 0px !important; max-width: none !important; max-height: none !important; height: 48.75px; margin-left: -4.875px; margin-top: -4.875px; transform: none;"></div>
+										</div>
+										<input id="dataX" type="hidden" value="42"> <input id="dataY" type="hidden" value="42"> <input id="dataWidth" type="hidden" value="337"> <input id="dataHeight" type="hidden" value="337">
+										<div class="img-btn">
+											<div class="btn-group hidden">
+												<label class="btn btn-primary btn-upload" for="inputImage" title="选择图片"> <span class="docs-tooltip" data-toggle="tooltip"> 选择图片 </span>
+												</label>
+											</div>
+											<div class="btn-group">
+												<button class="btn btn-primary avatar-save" id="avatar-save" title="确认" data-dismiss="modal" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 80, &quot;height&quot;: 80 }">
+													确认</button>
+											</div>
+											<div class="btn-group">
+												<button class="btn btn-default" title="取消" data-dismiss="modal" id="avatar-cal">取消</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">项目名称</span>
+						</div>
+						<div class="group-content">
+							<input type="text" class="form-control color-readonly" maxlength="50" name="name" placeholder="简洁清晰，不多于50字。" readonly="readonly" id="name" value="移动消防监控系统" data-bv-field="name">
+							<input type="hidden" name="id" id="projectId" value="8a8080856a1fc617016a215eb44a5bb2">
+						</div>
+						
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED">项目名称不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED">项目名称不多于50字！</small></div>
+
+					<div class="form-group select-box has-success">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">所在地</span>
+						</div>
+						<div class="group-content">
+							<div class="tip hidden">未注册公司请选择项目所在地，已注册公司请选择公司注册所在地。</div>
+							<select class="form-control locationCode tip-control select-control" name="locationCode" id="locationCode" data-bv-field="locationCode">
+								<option value="">请选择省</option>
+								<option value="11">北京市</option>
+								<option value="12">天津市</option>
+								<option value="13">河北省</option>
+								<option value="14">山西省</option>
+								<option value="15">内蒙古自治区</option>
+								<option value="21">辽宁省</option>
+								<option value="22">吉林省</option>
+								<option value="23">黑龙江省</option>
+								<option value="31">上海市</option>
+								<option value="32">江苏省</option>
+								<option value="33">浙江省</option>
+								<option value="34">安徽省</option>
+								<option value="35">福建省</option>
+								<option value="36">江西省</option>
+								<option value="37">山东省</option>
+								<option value="41">河南省</option>
+								<option value="42">湖北省</option>
+								<option value="43">湖南省</option>
+								<option value="44">广东省</option>
+								<option value="45">广西壮族自治区</option>
+								<option value="46">海南省</option>
+								<option value="50" selected="selected">重庆市</option>
+								<option value="51">四川省</option>
+								<option value="52">贵州省</option>
+								<option value="53">云南省</option>
+								<option value="54">西藏自治区</option>
+								<option value="61">陕西省</option>
+								<option value="62">甘肃省</option>
+								<option value="63">青海省</option>
+								<option value="64">宁夏回族自治区</option>
+								<option value="65">新疆维吾尔自治区</option>
+								<option value="71">台湾省</option>
+								<option value="81">香港</option>
+								<option value="82">澳门</option>
+								<option value="91">新疆生产建设兵团</option>
+								<option value="90">国外</option>
+							</select>
+							<select class="form-control cityCode select-control" name="cityCode" id="cityCode" data-bv-field="cityCode"><option value="">请选择市</option><option value="500228">梁平县</option><option value="500117">合川区</option><option value="500226">荣昌县</option><option value="500109">北碚区</option><option value="500110">綦江区</option><option value="500232">武隆县</option><option value="500231">垫江县</option><option value="500223">潼南县</option><option value="500104">大渡口区</option><option value="500111">大足区</option><option value="500107">九龙坡区</option><option value="500233">忠县</option><option value="500106">沙坪坝区</option><option value="500235">云阳县</option><option value="500242">酉阳土家族苗族自治县</option><option value="500116">江津区</option><option value="500113" selected="selected">巴南区</option><option value="500119">南川区</option><option value="500238">巫溪县</option><option value="500112">渝北区</option><option value="500105">江北区</option><option value="500230">丰都县</option><option value="500240">石柱土家族自治县</option><option value="500102">涪陵区</option><option value="500234">开县</option><option value="500120">铜梁区</option><option value="500237">巫山县</option><option value="500108">南岸区</option><option value="500236">奉节县</option><option value="500118">永川区</option><option value="500115">长寿区</option><option value="500241">秀山土家族苗族自治县</option><option value="500229">城口县</option><option value="500243">彭水苗族土家族自治县</option><option value="500114">黔江区</option><option value="500121">璧山区</option><option value="500101">万州区</option><option value="500103">渝中区</option></select>
+						</div>
+						 
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="locationCode" data-bv-result="VALID">所在省市不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="cityCode" data-bv-result="NOT_VALIDATED">所在省市不能为空！</small></div>
+					<div class="form-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">所属领域</span>
+						</div>
+						<div class="group-content">
+							<input type="hidden" name="_industryCode" value="1"><select class="form-control hidden" name="industryCode" id="industryCode" multiple="multiple">
+								<option value="A">农、林、牧、渔业</option>
+								<option value="B">采矿业</option>
+								<option value="C">制造业</option>
+								<option value="D">水、电、热力、燃气生产及供应</option>
+								<option value="E">建筑业</option>
+								<option value="F">批发和零售业</option>
+								<option value="G">交通运输、仓储和物流业</option>
+								<option value="H">住宿和餐饮业</option>
+								<option value="I" selected="selected">信息技术服务业</option>
+								<option value="J">金融业</option>
+								<option value="K">房地产业</option>
+								<option value="L">租赁和商务服务业</option>
+								<option value="M" selected="selected">科学技术服务业</option>
+								<option value="N">水利、环境和公共设施管理</option>
+								<option value="O" selected="selected">居民服务、修理和其他服务业</option>
+								<option value="P">教育</option>
+								<option value="Q">医疗和社会工作</option>
+								<option value="R">文化、体育和娱乐业</option>
+							</select>
+							<ul class="select-blocks" id="industryCodeBlocks">
+								<li data-value="A">农、林、牧、渔业</li>
+								<li data-value="B">采矿业</li>
+								<li data-value="C">制造业</li>
+								<li data-value="D">水、电、热力、燃气生产及供应</li>
+								<li data-value="E">建筑业</li>
+								<li data-value="F">批发和零售业</li>
+								<li data-value="G">交通运输、仓储和物流业</li>
+								<li data-value="H">住宿和餐饮业</li>
+								<li data-value="I" class="selected">信息技术服务业</li>
+								<li data-value="J">金融业</li>
+								<li data-value="K">房地产业</li>
+								<li data-value="L">租赁和商务服务业</li>
+								<li data-value="M" class="selected">科学技术服务业</li>
+								<li data-value="N">水利、环境和公共设施管理</li>
+								<li data-value="O" class="selected">居民服务、修理和其他服务业</li>
+								<li data-value="P">教育</li>
+								<li data-value="Q">医疗和社会工作</li>
+								<li data-value="R">文化、体育和娱乐业</li>
+							</ul>
+						</div>
+						
+						<small class="help-block hidden" id="indusErr">请选择项目所属领域</small>
+					</div>
+				</div>
+			</div>
+			<div class="project-block">
+				<div>
+					<h2 class="h2-title">项目介绍</h2>
+					<div class="form-group textarea-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">项目概述</span>
+						</div>
+						<div class="group-content textarea-box">
+							<div class="tip hidden">可拆分为产品描述、用户群体、项目愿景、竞争对手等方面详细描述，不少于100字，但不超过1000字。</div>
+							<textarea class="form-control intro-text" id="synopsis" name="synopsis" maxlength="1000" placeholder="可拆分为产品描述、用户群体、项目愿景、竞争对手等方面详细描述，不少于100字，但不超过1000字。" data-bv-field="synopsis">移
+动监控疏散系统是通过 
+获取硬件装置所在位置检测到的温度、湿度、烟雾浓度等环境数据通过无线网传输技术将数据进行融合传输到后台服务端，服务端将数据传到移动客户端，让用户可
+以在任何和位置监控装置的所检测的实时环境信息，当数据在火灾预警值范围内，将会立刻定位火灾点规划逃生路线，并且及时进行报警处理，从而达到即时发现火
+灾并立即将火灾造成的财产、生命损失达到最小化！移动监控疏散系统具有无线传输、数据融合、移动检测、火灾定位、路线规划、智能预警核心功能</textarea>
+							<div class="text-count"><span class="count">222</span>/<span>1000</span></div>
+						</div>
+						
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="synopsis" data-bv-result="NOT_VALIDATED">项目简介不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="synopsis" data-bv-result="NOT_VALIDATED">请简介您的项目，字数在100-1000字间，空格也计入字数！</small></div>
+					<div class="form-group radio-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">高校科研成果转化</span>
+						</div>
+						<div class="group-content">
+							<div class="clearfix radio-box">
+								<div class="radio pull-left">
+									<label>
+										<input type="radio" name="wasBindUniTechnology" value="1" id="wasBindUniTechnology1" checked="checked" data-bv-field="wasBindUniTechnology">是
+									</label>
+								</div>
+								<div class="radio pull-left">
+									<label>
+										<input type="radio" name="wasBindUniTechnology" value="0" id="wasBindUniTechnology2" data-bv-field="wasBindUniTechnology">否
+									</label>
+								</div>
+							</div>
+							<!-- <p class="upload-tip" id="technologyTip" style="margin-top:10px;">允许将拥有科研成果的老师的股权合并计算，合并计算的股权不得少于50%（其中参赛成员合计不得少于15%）。</p> -->
+						</div>
+						
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="wasBindUniTechnology" data-bv-result="NOT_VALIDATED">请选择项目是否与高校科技结果相结合！</small></div>
+
+					<div class="form-group textarea-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">创始人简介</span>
+						</div>
+						<div class="group-content textarea-box">
+							<div class="tip tip2 hidden">一句话介绍自己，字数要求不超过50字。</div>
+							<textarea class="form-control intro-text intro-text2" name="founderSynopsis" maxlength="50" placeholder="一句话介绍自己，字数要求不超过50字" data-bv-field="founderSynopsis">一个努力钻研自己专业的人</textarea>
+							<div class="text-count"><span class="count">12</span>/<span>50</span></div>
+						</div>
+						
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="founderSynopsis" data-bv-result="NOT_VALIDATED">创始人简介不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="founderSynopsis" data-bv-result="NOT_VALIDATED">请填写创始人简介，字数在50字以内，空格也计入字数！</small></div>
+					<div class="form-group radio-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">创始人为科技成果<span style="margin-left:9px;">的完成人或所有人</span></span>
+						</div>
+						<div class="group-content">
+							<div class="clearfix radio-box" style="margin-top:11px;">
+								<div class="radio pull-left">
+									<label>
+										<input type="radio" name="isAchievementOwner" value="1" id="isAchievementOwner1" checked="checked" data-bv-field="isAchievementOwner">是
+									</label>
+								</div>
+								<div class="radio pull-left">
+									<label>
+										<input type="radio" name="isAchievementOwner" value="0" id="isAchievementOwner2" data-bv-field="isAchievementOwner">否
+									</label>
+								</div>
+							</div>
+
+						</div>
+						
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="isAchievementOwner" data-bv-result="NOT_VALIDATED">请选择创始人是否为科技成果的完成人或所有人！</small></div>
+					<div class="form-group radio-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">师生共创</span>
+						</div>
+						<div class="group-content">
+							<div class="clearfix radio-box">
+								
+								<div class="radio pull-left">
+									<label>
+										<input type="radio" name="isCreateTogeter" value="1" id="isCreateTogeter1" data-bv-field="isCreateTogeter">是
+									</label>
+								</div>
+								<div class="radio pull-left">
+									<label>
+										<input type="radio" name="isCreateTogeter" value="0" id="isCreateTogeter2" checked="checked" data-bv-field="isCreateTogeter">否
+									</label>
+								</div>
+							</div>
+
+						</div>
+						
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="isCreateTogeter" data-bv-result="NOT_VALIDATED">请选择是否为师生共创！</small></div>
+				</div>
+			</div>
+			<div class="project-block">
+				<h2 class="h2-title">认证信息</h2>
+				<div>
+					<div class="form-group" style="padding-bottom:20px;">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">项目进展</span>
+						</div>
+						<div class="group-content redios-box">
+							<div class="clearfix radio-box">
+								<div class="radio pull-left">
+									<label> <input type="radio" name="progress" value="0" id="progress1" checked="checked" data-bv-field="progress">创意计划阶段
+									</label>
+								</div>
+								<div class="radio pull-left">
+									<label> <input type="radio" name="progress" value="1" id="progress2" data-bv-field="progress">已注册公司运营
+									</label>
+								</div>
+								<div class="radio pull-left">
+									<label title="包含各类社会团体、民办非企业单位、基金会。"> <input type="radio" name="progress" value="2" id="progress3" data-bv-field="progress">已注册社会组织
+									</label>
+								</div>
+							</div>
+						</div>
+						
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="progress" data-bv-result="NOT_VALIDATED">项目进展必选一项！</small></div>
+				</div>
+				<div id="company" class="sub-contents" style="display: none;">
+          <div class="form-group">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title" id="comT">公司名称</span>
+            </div>
+            <div class="group-content">
+              <input type="text" maxlength="64" class="form-control" name="companyName" id="companyName" placeholder="请填写营业执照上的公司名称" data-bv-field="companyName">
+            </div>
+            
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="companyName" data-bv-result="NOT_VALIDATED">公司名称不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="companyName" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+          <div class="form-group com-only">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title">法人身份</span>
+            </div>
+            <div class="group-content">
+              <select name="legalRepresentType" id="legalRepresentType" class="form-control">
+                <option value="0" selected="selected">学生</option>
+                <option value="1">教师</option>
+              </select>
+            </div>
+            
+            <small class="help-block" style="color:#e57372;">毕业5年内的毕业生请选择学生身份。</small>
+          </div>
+          <div class="form-group">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title" id="nameT">法人姓名</span>
+              <input type="hidden" id="userName" value="郭海滨" maxlength="64">
+            </div>
+            <div class="group-content">
+              <input type="text" class="form-control color-readonly" name="legalRepresent" id="legalRepresent" placeholder="请填写" readonly="readonly" maxlength="64" data-bv-field="legalRepresent">
+            </div>
+            
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="legalRepresent" data-bv-result="NOT_VALIDATED">法人代表不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="legalRepresent" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+
+          <div class="form-group">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title">职务</span>
+            </div>
+            <div class="group-content">
+              <input type="text" maxlength="64" class="form-control" name="job" id="job" placeholder="请填写您在该公司中担任的最高职务" data-bv-field="job">
+            </div>
+            
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="job" data-bv-result="NOT_VALIDATED">担任职务不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="job" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+
+          <div class="form-group com-only" style="position:relative;">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title">注册资金</span>
+            </div>
+            <div class="group-content">
+              <input type="text" class="form-control" maxlength="10" name="registerCapital" placeholder="请填写 " style="padding-right:30px;" id="registerCapital" data-bv-field="registerCapital">
+              <p class="addon" style="left: 596px;">万元</p>
+            </div>
+            
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="registerCapital" data-bv-result="NOT_VALIDATED">注册资金不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="regexp" data-bv-for="registerCapital" data-bv-result="NOT_VALIDATED">资金只能为数字，请输入正确的金额！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="registerCapital" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+
+          <div class="form-group">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title">注册时间</span>
+            </div>
+            <div class="group-content">
+              <input type="text" class="form-control datetime" readonly="readonly" name="registerDate" placeholder="请填写" id="registerDate" data-bv-field="registerDate">
+            </div>
+            
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="registerDate" data-bv-result="NOT_VALIDATED">注册时间不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="date" data-bv-for="registerDate" data-bv-result="NOT_VALIDATED">请输入正确的日期！格式：2017-01-01。</small></div>
+
+          <div class="form-group">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title">注册所在地</span>
+            </div>
+            <div class="group-content">
+              <select class="form-control select-control" name="registerProvinceCode" id="registerProvinceCode" data-bv-field="registerProvinceCode">
+                <option value="" selected="selected">请选择省</option>
+                <option value="11">北京市</option>
+                <option value="12">天津市</option>
+                <option value="13">河北省</option>
+                <option value="14">山西省</option>
+                <option value="15">内蒙古自治区</option>
+                <option value="21">辽宁省</option>
+                <option value="22">吉林省</option>
+                <option value="23">黑龙江省</option>
+                <option value="31">上海市</option>
+                <option value="32">江苏省</option>
+                <option value="33">浙江省</option>
+                <option value="34">安徽省</option>
+                <option value="35">福建省</option>
+                <option value="36">江西省</option>
+                <option value="37">山东省</option>
+                <option value="41">河南省</option>
+                <option value="42">湖北省</option>
+                <option value="43">湖南省</option>
+                <option value="44">广东省</option>
+                <option value="45">广西壮族自治区</option>
+                <option value="46">海南省</option>
+                <option value="50">重庆市</option>
+                <option value="51">四川省</option>
+                <option value="52">贵州省</option>
+                <option value="53">云南省</option>
+                <option value="54">西藏自治区</option>
+                <option value="61">陕西省</option>
+                <option value="62">甘肃省</option>
+                <option value="63">青海省</option>
+                <option value="64">宁夏回族自治区</option>
+                <option value="65">新疆维吾尔自治区</option>
+                <option value="71">台湾省</option>
+                <option value="81">香港</option>
+                <option value="82">澳门</option>
+                <option value="91">新疆生产建设兵团</option>
+                <option value="90">国外</option>
+              </select> <input type="text" maxlength="64" class="form-control select-control" style="width: 333px;" name="registerAddress" placeholder="注册地址" id="registerAddress" data-bv-field="registerAddress">
+            </div>
+             
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="registerProvinceCode" data-bv-result="NOT_VALIDATED">注册所在地不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="registerAddress" data-bv-result="NOT_VALIDATED">注册所在地不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="registerAddress" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+          <div class="form-group select-box">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title" id="orgCode">统一社会信用代码</span>
+            </div>
+            <div class="group-content">
+              <!-- <div class="tip tip2 hidden">港澳台地区及国外用户请填写相关有效证件号码。</div> -->
+							<input type="text" maxlength="64" id="orgHolder" class="form-control tip-control input-control" name="organizationCode" placeholder="统一社会信用代码或组织机构代码" data-bv-field="organizationCode">
+							
+            </div>
+            
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="organizationCode" data-bv-result="NOT_VALIDATED">统一社会信用代码不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="organizationCode" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+          <div class="form-group com-only" id="structure">
+            <div class="group-title" style="position:relative;">
+              <span class="star">*</span>
+							<span class="title">股权结构</span>
+							<a role="button" class="intro-link" id="explain" title="股权结构填写说明">?</a>
+							<div class="popover top ex-drop" id="ex-drop">
+								<div class="arrow"></div>
+								<h3 class="popover-title modal-header">股权结构填写说明
+								</h3>
+								<div class="popover-content">
+									1、在校及毕业五年内的学生股东身份请选择学生。<br>2、各股东持股比例之和应该等于100%。<br>3、请您填写真实、符合参赛要求的股权结构，虚假填报将影响您的后续参赛。
+								</div>
+							</div>
+						</div>
+						<!-- <div class="str-tip">1、在校及毕业五年内的学生股东身份请选择学生。<br>2、各股东持股比例之和应该等于100%。<br>3、请您填写真实、符合参赛要求的股权结构，虚假填报将影响您的后续参赛。</div> -->
+            <div class="group-content structure-list form-list">
+              <span class="add oprate">添加</span>
+              <div class="structure-item form-item">
+                
+								<div class="invest-line">
+									<span class="invest-key">股东身份：</span><select class="form-control type-input" name="equityStructures[0].shareholderType" data-small="type-err" data-emperr="请选择股东身份！">
+										<option value="" disabled="disabled" selected="selected">请选择股东身份</option>
+										<span style="display:none"><option value="1">教师</option></span>
+										<option value="0">学生</option>
+										<option value="2">其他</option>
+									</select><small class="help-block type-err hidden">请选择股东身份！</small>
+							</div>
+                <div class="invest-line">
+                  <span class="invest-key">股东：</span><input type="text" maxlength="64" class="form-control name-input" name="equityStructures[0].shareholder" data-small="name-err" data-emperr="股东姓名不能为空！" placeholder="请填写人名或机构名" id="equityStructures0.shareholder" data-bv-field="equityStructures[0].shareholder"><small class="help-block name-err hidden">股东姓名不能为空！</small>
+                </div>
+                <div class="invest-line money-line">
+                  <span class="invest-key">持股比例：</span><input type="text" id="first-long" class="form-control percent-input" name="equityStructures[0].shareholderRatio" maxlength="6" data-small="percent-err" data-emperr="持股比例不能为空！" data-patenterr="0-100，保留小数点后两位！" data-patent="^((\d{1,2})|(\d{1,2}\.\d{0,2})|(100|100\.0|100\.00))$" data-trim="^\d{1,}(\.(\d{1,})?)?$" placeholder="小数点后两位" data-bv-field="equityStructures[0].shareholderRatio"><small class="help-block percent-err hidden">持股比例不能为空</small>
+                  <span class="percent">%</span>
+                </div>
+                <span class="del oprate">删除</span>
+              </div>
+              
+            </div>
+          <small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="equityStructures[0].shareholder" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="equityStructures[0].shareholderRatio" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+          <div class="form-group com-only">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title">获得投资情况</span>
+            </div>
+            <div class="group-content">
+              <div class="clearfix radio-box">
+                <div class="radio pull-left" id="wasIncested">
+                  <label>
+                    <input type="radio" name="isInvest" value="1" data-bv-field="isInvest">已获投资
+                  </label>
+                </div>
+                <div class="radio pull-left" id="wasNotIncested">
+                  <label>
+                    <input type="radio" name="isInvest" value="0" checked="checked" data-bv-field="isInvest">未获投资
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="isInvest" data-bv-result="NOT_VALIDATED">请选择是否已获投资！</small></div>
+          <div class="form-group com-only" id="invest" style="display: none;">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title">已获投资</span>
+            </div>
+            <div class="group-content invest-list form-list">
+              <span class="add oprate">添加</span>
+              <div class="invest-item form-item">
+                <!-- <div class="hr"></div> -->
+                <div class="invest-line">
+                  <span class="invest-key">投资机构名称：</span><input type="text" maxlength="64" class="form-control  investname-input" name="invests[0].orgName" data-small="investname-err" data-emperr="投资机构名称不能为空！" placeholder="请填写" id="invests0.orgName" data-bv-field="invests[0].orgName"> <small class="help-block investname-err hidden">投资机构名称不能为空</small>
+
+                </div>
+                <div class="invest-line">
+                  <span class="invest-key">融资阶段：</span><select class="form-control investstage-input" name="invests[0].investStageCode" data-small="investstage-err" data-emperr="请选择项目处的融资阶段！" id="invests0.investStageCode">
+                    <option value="" selected="selected">请选择项目处的融资阶段</option>
+                    <option value="0">种子轮</option>
+                    <option value="1">天使轮</option>
+                    <option value="2">A轮</option>
+                    <option value="3">B轮</option>
+                    <option value="4">C轮</option>
+                    <option value="5">D轮</option>
+                    <option value="6">E轮及以后</option>
+                  </select><small class="help-block investstage-err hidden">请选择项目处的融资阶段</small>
+                </div>
+                <div class="invest-line money-line">
+                  <span class="invest-key">投资金额：</span><input type="text" class="form-control  investmoney-input" name="invests[0].investMoney" maxlength="10" data-small="investmoney-err" data-emperr="投资金额不能为空！" data-patenterr="请填写数字，最多保留小数点后两位。" data-patent="^((\d+)|(\d+\.\d{0,2}))$" data-trim="^\d+(\.(\d+)?)?$" placeholder="请填写" id="invests0.investMoney" data-bv-field="invests[0].investMoney"><span class="addon">万元</span><small class="help-block investmoney-err hidden">投资金额不能为空</small>
+                </div>
+                <div class="invest-line">
+                  <span class="invest-key">获得时间：</span><input type="text" class="form-control  investtime-input" name="invests[0].gainDate" placeholder="请填写" readonly="readonly" data-small="investtime-err" data-emperr="获得时间不能为空！" id="invests0.gainDate"><small class="help-block investtime-err hidden">获得时间不能为空</small>
+                </div>
+                <span class="del oprate">删除</span>
+              </div>
+
+              
+            </div>
+          <small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="invests[0].orgName" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="invests[0].investMoney" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+          <div class="form-group org-only">
+            <div class="group-title">
+              <span class="star">*</span>
+              <span class="title">获得资金支持情况</span>
+            </div>
+            <div class="group-content">
+              <div class="clearfix radio-box">
+                <div class="radio pull-left">
+                  <label>
+                    <input type="radio" name="isSupport" value="1" id="isSupport1" data-bv-field="isSupport">已获资金支持
+                  </label>
+                </div>
+                <div class="radio pull-left">
+                  <label>
+                    <input type="radio" name="isSupport" value="0" id="isSupport2" data-bv-field="isSupport">未获资金支持
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+          <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="isSupport" data-bv-result="NOT_VALIDATED">请选择获得资金支持情况！</small></div>
+        </div>
+				<div>
+					<!-- 项目计划书 -->
+					<div class="form-group file-box">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">项目计划书</span>
+						</div>
+						<div class="group-content">
+							<a class="file-input" id="doc">重新上传 <input type="file" name="physicalFile" onclick='getFlieName(this,"pdf,doc,docx","doc")' data-bv-field="physicalFile">
+							</a> <span class="file-tip">移动消防监控系统项目计划书</span>
+							<p class="upload-tip">
+								格式为pdf、word，不超过20M，文件数量限一个。<span id="ieTip" class="hidden">（IE10浏览器请双击选择文件。）</span>
+								<span style="color: rgb(229, 115, 114); display: none;" id="phy-txt">需将统一社会信用代码及其他佐证材料（专利、著作、政府批文、鉴定材料等）电子版附在计划书内一并上传。</span>
+							</p>
+						</div>
+						
+					<small style="display: none;" class="help-block" data-bv-validator="file" data-bv-for="physicalFile" data-bv-result="NOT_VALIDATED">请选择正确格式和大小的文件！</small></div>
+					<!-- 项目展示PPT -->
+					
+					
+
+					<!-- 项目视频 -->
+					
+				</div>
+			</div>
+
+			<div>
+				<div class="project-block">
+					<h2 class="h2-title">隐私设置</h2>
+					<div class="form-group">
+						<div class="group-title">
+							<span class="star">*</span>
+							<span class="title">隐私设置</span>
+						</div>
+
+						<div class="group-content">
+							<div class="clearfix radio-box secret-box">
+								<div class="radio" id="secret1">
+									<label>
+										<input type="radio" name="secretStatus" value="1" data-bv-field="secretStatus" checked="checked"> 保密
+										<small>只展示项目概述模块。</small>
+									</label>
+								</div>
+								<div class="radio" id="secret2">
+									<label>
+										<input type="radio" name="secretStatus" value="2" data-bv-field="secretStatus">向投资人公开
+										<small>向投资人展示项目的往届获奖信息、项目概述、团队成员、融资情况、专利情况、工商注册信息。</small>
+									</label>
+								</div>
+								
+							</div>
+						</div>
+					<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="secretStatus" data-bv-result="NOT_VALIDATED">隐私设置至少选择一项！</small></div>
+				</div>
+
+				<div class="form-group" style="padding-bottom:26px;">
+					<div class="bottom-divider">
+						请如实填写信息，投资人只有充分了解项目信息后，才会决定是否投资。
+					</div>
+				</div>
+				<button type="submit" class="hide" id="hiddenSub"></button>
+				<div class="form-group text-center">
+					<button type="button" id="subForm" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="温馨提示：因网站提高安全问题等级排查，本页所填写的内容包括某些英文字母或特殊字符将导致无法通过校验，请仔细核查并修改后再提交。给您带来不便敬请谅解。" class="btn btn-primary subform-inline" data-original-title="" title="">保存</button>
+					<button type="button" id="cancelForm" class="btn btn-default subform-inline">取消</button>
+				</div>
+			</div>
+		</form>
+		<div class="form-project">
+			<div class="project-block" style="padding-top:30px;" id="memberForm">
+				<div class="clearfix">
+					<div class="group-title">
+						<span class="title">团队成员</span>
+					</div>
+					<div class="group-content">
+						<div id="memberBox">
+							<ul class="item-list member-list clearfix">
+								<li>
+									<div class="pic-box">
+										<img alt="" onerror="javascript:this.src='//t2.chei.com.cn/ncss/cy/web/img/head_none.png'" src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_002.jfif">
+										
+										
+									</div>
+									<div class="content-box">
+										<h4>
+											<span>郭海滨</span>
+											<small>项目创始人</small>
+										</h4>
+										<p>重庆工程学院</p>
+									</div>
+
+								</li>
+								
+								<li>
+									<div class="pic-box">
+										<img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_003.jfif">
+									</div>
+									<div class="content-box">
+										<h4>
+											<span>贺诗雨</span>
+											<small>团队成员</small>
+										</h4>
+										<p>重庆工程学院</p>
+										<a title="删除" class="del-icon member-del" data-toggle="modal" data-target="#delMember" data-name="贺诗雨" csvalue="621741c0bbb4f5a60aba3730997b3771" data-id="2c92f8ef6380accf01638243148550e6" data-type="new" csname="cprmcsrf">×</a>
+										
+										
+									</div>
+
+								</li>
+								<li>
+									<div class="pic-box">
+										<img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_006.jfif">
+									</div>
+									<div class="content-box">
+										<h4>
+											<span>王依潇</span>
+											<small>团队成员</small>
+										</h4>
+										<p>重庆工程学院</p>
+										<a title="删除" class="del-icon member-del" data-toggle="modal" data-target="#delMember" data-name="王依潇" csvalue="621741c0bbb4f5a60aba3730997b3771" data-id="2c92f8ef62cd6c980162cec93d203768" data-type="new" csname="cprmcsrf">×</a>
+										
+										
+									</div>
+
+								</li>
+								<li>
+									<div class="pic-box">
+										<img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture.jfif">
+									</div>
+									<div class="content-box">
+										<h4>
+											<span>唐智文</span>
+											<small>团队成员</small>
+										</h4>
+										<p>重庆工程学院</p>
+										<a title="删除" class="del-icon member-del" data-toggle="modal" data-target="#delMember" data-name="唐智文" csvalue="621741c0bbb4f5a60aba3730997b3771" data-id="2c92f8ef633f0f8801633f4943f6453a" data-type="new" csname="cprmcsrf">×</a>
+										
+										
+									</div>
+
+								</li>
+								<li>
+									<div class="pic-box">
+										<img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/picture_005.jfif">
+									</div>
+									<div class="content-box">
+										<h4>
+											<span>贾茉</span>
+											<small>团队成员</small>
+										</h4>
+										<p>重庆工商大学</p>
+										<a title="删除" class="del-icon member-del" data-toggle="modal" data-target="#delMember" data-name="贾茉" csvalue="621741c0bbb4f5a60aba3730997b3771" data-id="8a80808b6ae90102016aea5429041cfa" data-type="new" csname="cprmcsrf">×</a>
+										
+										
+									</div>
+
+								</li>
+								
+							</ul>
+							<small class="team-tip"> <span class="team-attention"></span> <span class="team-count">提示：如参加大赛，请添加3名以上团队成员（团队成员需为注册用户且学籍通过验证）。</span>
+							</small>
+							<div class="add">
+								<a data-toggle="collapse" data-target="#team"><span class="add-icon">+</span><span>添加团队成员</span></a>
+							</div>
+							<div class="collapse bv-form" id="team" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+								<div class="form-horizontal collapse-modal" role="form">
+									<div class="add-member-tip">请完整填写手机号和用户姓名，进行精准搜索。为保证创业者的隐私，将不显示其个人详细信息。</div>
+									<div class="form-group">
+
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">真实姓名</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="name" id="memberName" placeholder="团队成员的真实姓名" data-bv-field="name">
+										</div>
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED">用户姓名不能为空</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">手机号码</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="24" class="form-control" name="loginName" placeholder="请输入成员的手机号码" data-bv-field="loginName">
+										</div>
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="loginName" data-bv-result="NOT_VALIDATED">手机号码不能为空</small><small style="display: none;" class="help-block" data-bv-validator="regexp" data-bv-for="loginName" data-bv-result="NOT_VALIDATED">请输入正确的手机号码</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="loginName" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group form-modal-btn">
+										<button class="btn btn-primary" id="saveInfoEdit" type="button">搜索</button>
+										<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#team">取消</button>
+									</div>
+									<div class="member-result">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="group-title">
+						<span class="title">指导教师</span>
+					</div>
+					<div class="group-content">
+						<div id="teacherBox" aria-multiselectable="false">
+							<ul class="item-list teacher-list clearfix">
+								<li>
+									<div class="other-content-box">
+										<h4>赵商</h4>
+										<p>职称：<span title="讲师">讲师</span></p>
+										<p>学校：<span title="重庆工程学院">重庆工程学院</span></p>
+										<a class="edit edit-teacher" value="8a8080856a1fc617016a2161716e5cae_赵商_18983127880_476215526@qq.com_12608_重庆工程学院_软件与人工智能学员_讲师" csvalue="080d8197db9e4e486b71cbf557e2f9cd">编辑</a>
+										<a class="del-icon team-del" data-toggle="modal" csvalue="d1d7e41413bd5784acea01a5792b0567" data-target="#delete" value="/talentproject/deletetutor/8a8080856a1fc617016a2161716e5cae_赵商_讲师吗？" title="删除指导老师">×</a>
+									</div>
+								</li>
+								<li>
+									<div class="other-content-box">
+										<h4>朱世宇</h4>
+										<p>职称：<span title="副教授">副教授</span></p>
+										<p>学校：<span title="重庆工程学院">重庆工程学院</span></p>
+										<a class="edit edit-teacher" value="8a8080856a1fc617016a216b06896001_朱世宇_18623405007_1020996027@qq.com_12608_重庆工程学院_计算机学院_副教授" csvalue="866dd91b42f70e8619def9fc7eb831a8">编辑</a>
+										<a class="del-icon team-del" data-toggle="modal" csvalue="d77f4e5e3f6e1c7d21a521d6b97d6098" data-target="#delete" value="/talentproject/deletetutor/8a8080856a1fc617016a216b06896001_朱世宇_副教授吗？" title="删除指导老师">×</a>
+									</div>
+								</li>
+							</ul>
+							<div class="add">
+								<a id="addTeacher"><span class="add-icon">+</span><span>添加指导教师</span></a>
+							</div>
+							<div class="collapse" id="teacher">
+								<form class="form-horizontal collapse-modal teacher-form bv-form" role="form" action="/talentproject/addtutor" method="post" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+								 <input id="csrf-talentproject-addtutor" type="hidden" value="64516cdcc8a7c67cb7659c0bf4be6b41" name="cprmcsrf">
+									<input type="hidden" name="projectId" value="8a8080856a1fc617016a215eb44a5bb2">
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">真实姓名</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="name" placeholder="指导老师的真实姓名" id="name" data-bv-field="name">
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED">姓名不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">手机号码</span>
+										</div>
+										<div class="group-content">
+											<input type="text" class="form-control" name="phone" maxlength="24" placeholder="请输入指导老师的手机号码" id="phone" data-bv-field="phone">
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="phone" data-bv-result="NOT_VALIDATED">手机号码不能为空</small><small style="display: none;" class="help-block" data-bv-validator="regexp" data-bv-for="phone" data-bv-result="NOT_VALIDATED">请输入正确的手机号码</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="phone" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">电子邮箱</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="email" placeholder="请填写电子邮箱" id="email" data-bv-field="email">
+											
+
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="email" data-bv-result="NOT_VALIDATED">邮箱不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="emailAddress" data-bv-for="email" data-bv-result="NOT_VALIDATED">请输入正确的邮箱地址</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="email" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">所在院校</span>
+										</div>
+										<div class="group-content">
+											<select class="school-code select2-hidden-accessible" name="schoolCode" id="schoolCode1" style="width: 300px;" tabindex="-1" aria-hidden="true" data-bv-field="schoolCode"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 300px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-schoolCode1-container"><span class="select2-selection__rendered" id="select2-schoolCode1-container"><span class="select2-selection__placeholder">请选择院校</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="schoolCode" data-bv-result="NOT_VALIDATED">学院名称不能为空！</small></div>
+									<input type="hidden" name="schoolName" id="schoolName1" value="">
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">所在部门</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="department" placeholder="请填写导师就任部门" id="department" data-bv-field="department">
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="department" data-bv-result="NOT_VALIDATED">所在部门不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="department" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">导师职称</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="jobTitle" placeholder="请填写项目导师职称" id="jobTitle" data-bv-field="jobTitle">
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="jobTitle" data-bv-result="NOT_VALIDATED">导师职称不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="jobTitle" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group form-modal-btn">
+										<button class="btn btn-primary" type="submit">保存</button>
+										<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#teacher">取消</button>
+									</div>
+								</form>
+							</div>
+							<div class="collapse" id="editTeacher">
+								<form class="form-horizontal collapse-modal teacher-form bv-form" role="form" action="/talentproject/edittutor" method="post" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+								 <input id="csrf-talentproject-edittutor" type="hidden" name="cprmcsrf">
+									<input type="hidden" name="projectId" value="8a8080856a1fc617016a215eb44a5bb2">
+									<input id="teachId" type="hidden" name="id" value="">
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">真实姓名</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="name" placeholder="指导老师的真实姓名" id="name" data-bv-field="name">
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED">姓名不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">手机号码</span>
+										</div>
+										<div class="group-content">
+											<input type="text" class="form-control" name="phone" maxlength="24" placeholder="请输入指导老师的手机号码" id="phone" data-bv-field="phone">
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="phone" data-bv-result="NOT_VALIDATED">手机号码不能为空</small><small style="display: none;" class="help-block" data-bv-validator="regexp" data-bv-for="phone" data-bv-result="NOT_VALIDATED">请输入正确的手机号码</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="phone" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">电子邮箱</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="email" placeholder="请填写电子邮箱" id="email" data-bv-field="email">
+
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="email" data-bv-result="NOT_VALIDATED">邮箱不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="emailAddress" data-bv-for="email" data-bv-result="NOT_VALIDATED">请输入正确的邮箱地址</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="email" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">所在院校</span>
+										</div>
+										<div class="group-content">
+											<select class="school-code select2-hidden-accessible" name="schoolCode" id="schoolCode2" style="width: 300px;" tabindex="-1" aria-hidden="true" data-bv-field="schoolCode"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 300px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-schoolCode2-container"><span class="select2-selection__rendered" id="select2-schoolCode2-container"><span class="select2-selection__placeholder">请选择院校</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="schoolCode" data-bv-result="NOT_VALIDATED">学院名称不能为空！</small></div>
+									<input type="hidden" name="schoolName" id="schoolName2" value="">
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">所在部门</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="department" placeholder="请填写导师就任部门" id="department" data-bv-field="department">
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="department" data-bv-result="NOT_VALIDATED">所在部门不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="department" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">导师职称</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="jobTitle" placeholder="请填写项目导师职称" id="jobTitle" data-bv-field="jobTitle">
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="jobTitle" data-bv-result="NOT_VALIDATED">导师职称不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="jobTitle" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group form-modal-btn">
+										<button class="btn btn-primary" type="submit">保存</button>
+										<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#editTeacher">取消</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="group-title">
+						<span class="title">已获专利</span>
+					</div>
+					<div class="group-content">
+						<div id="patentBox" aria-multiselectable="false">
+							<ul class="item-list teacher-list clearfix">
+								
+							</ul>
+							<div class="add">
+								<a id="addPatent"><span class="add-icon">+</span><span>添加已获专利</span></a>
+							</div>
+							<div class="collapse" id="patent">
+								<form class="form-horizontal collapse-modal patent-form bv-form" role="form" action="/talentproject/addpatent" method="post" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+								 <input id="csrf-talentproject-addpatent" type="hidden" value="87a509413ef95673e42efaf0a4bdfde1" name="cprmcsrf">
+									<input type="hidden" name="projectId" value="8a8080856a1fc617016a215eb44a5bb2">
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">专利名称</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="name" placeholder="项目所获专利的名称" id="name" data-bv-field="name">
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED">专利名称不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">专利类别</span>
+										</div>
+										<div class="group-content">
+											<select class="form-control" name="patentCategoryCode" id="patentCategoryCode" data-bv-field="patentCategoryCode">
+												<option value="" selected="selected">请选择项目所获专利的类别</option>
+												<option value="1">发明专利</option>
+												<option value="2">实用新型专利</option>
+												<option value="3">外观设计专利</option>
+											</select>
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="patentCategoryCode" data-bv-result="NOT_VALIDATED">专利类别必须选填一项！</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">专利号</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="patentCode" placeholder="请填写专利号" id="patentCode" data-bv-field="patentCode">
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="patentCode" data-bv-result="NOT_VALIDATED">专利号不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="patentCode" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">获得时间</span>
+										</div>
+										<div class="group-content">
+											<input type="text" class="form-control patentTime" name="gainTime" readonly="readonly" placeholder="请选择获得时间" id="gainTime" data-bv-field="gainTime">
+											
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="gainTime" data-bv-result="NOT_VALIDATED">专利获得时间不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="date" data-bv-for="gainTime" data-bv-result="NOT_VALIDATED">请输入正确的日期！格式：2017-01-01</small></div>
+									<div class="form-group form-modal-btn">
+										<button class="btn btn-primary" type="submit">保存</button>
+										<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#patent">取消</button>
+									</div>
+								</form>
+							</div>
+							<div class="collapse" id="editPatent">
+								<form class="form-horizontal collapse-modal patent-form bv-form" role="form" action="/talentproject/editpatent" method="post" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+								  <input id="csrf-talentproject-editpatent" type="hidden" value="15abca730225558704587625cad89bc2" name="cprmcsrf">
+									<input type="hidden" name="projectId" value="8a8080856a1fc617016a215eb44a5bb2">
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">专利名称</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="name" placeholder="项目所获专利的名称" id="name" data-bv-field="name">
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED">专利名称不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">专利类别</span>
+										</div>
+										<div class="group-content">
+											<select class="form-control" name="patentCategoryCode" id="patentCategoryCode" data-bv-field="patentCategoryCode">
+												<option value="" selected="selected">请选择项目所获专利的类别</option>
+												<option value="1">发明专利</option>
+												<option value="2">实用新型专利</option>
+												<option value="3">外观设计专利</option>
+											</select>
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="patentCategoryCode" data-bv-result="NOT_VALIDATED">专利类别必须选填一项！</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">专利号</span>
+										</div>
+										<div class="group-content">
+											<input type="text" maxlength="64" class="form-control" name="patentCode" placeholder="请填写专利号" id="patentCode" data-bv-field="patentCode">
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="patentCode" data-bv-result="NOT_VALIDATED">专利号不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="stringLength" data-bv-for="patentCode" data-bv-result="NOT_VALIDATED">Please enter a value with valid length</small></div>
+									<div class="form-group">
+										<div class="group-title">
+											<span class="star">*</span>
+											<span class="title">获得时间</span>
+										</div>
+										<div class="group-content">
+											<input type="text" class="form-control patentTime" name="gainTime" readonly="readonly" placeholder="请选择获得时间" id="gainTime" data-bv-field="gainTime">
+										</div>
+										
+									<small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="gainTime" data-bv-result="NOT_VALIDATED">专利获得时间不能为空！</small><small style="display: none;" class="help-block" data-bv-validator="date" data-bv-for="gainTime" data-bv-result="NOT_VALIDATED">请输入正确的日期！格式：2017-01-01</small></div>
+									<div class="form-group form-modal-btn">
+										<button class="btn btn-primary" type="submit">保存</button>
+										<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#editPatent">取消</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 提交成功弹窗 -->
+	
+	<!-- 提示团队成员不能删除模态框 -->
+	<div class="modal fade bs-del-modal-sm" tabindex="-1" role="dialog" id="nodelet" aria-hidden="true">
+		<div class="modal-dialog modal-sm" style="margin-top: 234px;">
+			<div class="modal-content">
+				<div class="modal-header modal-header-defined ">
+					<button type="button" class="close close-defined" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title modal-title-defined text-center">无法删除团队成员</h4>
+				</div>
+				<div class="modal-body project-modal-text">
+					<span class="project-modal-prompt"></span>
+					<div class="project-modal-info">
+						<p class="project-modal-del">
+							参赛项目的已注册团队成员不能少于3人<br>
+						</p>
+						<div class="form-group clearfix modal-confirm center">
+							<button class="btn btn-default modal-btn-info-save" data-dismiss="modal">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="delMember" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm" style="margin-top: 234px;">
+			<div class="modal-content">
+				<div class="modal-header modal-header-defined">
+					<button type="button" class="close close-defined" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title text-center modal-title-defined">删除团队成员</h4>
+				</div>
+				<div class="modal-body project-modal-text">
+					<span class="project-modal-question"></span>
+					<div class="project-modal-info">
+						<p class="project-modal-del del-html">确认删除 <span class="member-name">王小明</span> 的团队成员身份 ?</p>
+						<div class="form-group clearfix modal-confirm">
+							<button class="btn btn-default modal-btn-info-save bg-c4877ed" type="button">删除</button>
+							<button type="button" class="btn btn-default modal-btn-info-cancel" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 提示评审已勾选不能删除 -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="joined" aria-hidden="true">
+		<div class="modal-dialog modal-sm" style="margin-top: 234px;">
+			<div class="modal-content">
+				<div class="modal-header modal-header-defined ">
+					<button type="button" class="close close-defined" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title modal-title-defined text-center">无法删除团队成员</h4>
+				</div>
+				<div class="modal-body project-modal-text">
+					<span class="project-modal-prompt"></span>
+					<div class="project-modal-info">
+						<p class="project-modal-del">
+							该成员为现场答辩成员，如要删除请先取消选择。<br>
+						</p>
+						<div class="form-group clearfix modal-confirm center">
+							<button class="btn btn-default modal-btn-info-save" data-dismiss="modal">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 通用信息提示 -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="resultTip" aria-hidden="true">
+		<div class="modal-dialog modal-sm" style="margin-top: 234px;">
+			<div class="modal-content">
+				<div class="modal-header modal-header-defined ">
+					<button type="button" class="close close-defined" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title modal-title-defined text-center" id="resultTitle">温馨提示</h4>
+				</div>
+				<div class="modal-body project-modal-text">
+					<span class="project-modal-prompt" id="resultIcon"></span>
+					<div class="project-modal-info">
+						<p class="project-modal-del" id="resultMessage">
+							已成功发送邀请，请通知你的团队成员登录大创网→进入个人中心→点击“我的消息”，接受你的邀请。
+						</p>
+						<div class="form-group clearfix modal-confirm" style="padding-left: 70px;">
+							<button class="btn btn-default modal-btn-info-save" data-dismiss="modal">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 删除指导老师 -->
+	<div class="modal fade bs-team-modal-sm" id="delete" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm" style="margin-top: 234px;">
+			<div class="modal-content">
+				<div class="modal-header modal-header-defined">
+					<button type="button" class="close close-defined" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title text-center modal-title-defined" id="mySmallModalLabel">删除团队成员</h4>
+				</div>
+				<div class="modal-body project-modal-text">
+					<span class="project-modal-question"></span>
+					<div class="project-modal-info">
+						<p class="project-modal-del del-html">确认删除 王小明 的团队成员身份 ?</p>
+						<div class="form-group clearfix modal-confirm">
+							<form role="form" class="delete form-horizontal form-modal project-modal-text" method="post">
+								<input type="hidden" id="csDel" name="cprmcsrf">
+								<input type="hidden" name="projectId" value="8a8080856a1fc617016a215eb44a5bb2">
+								<button class="btn btn-default modal-btn-info-save bg-c4877ed" type="submit">删除</button>
+								<button type="button" class="btn btn-default modal-btn-info-cancel" data-dismiss="modal">取消</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部开始 -->
+	<div>
+    <div class="footer">
+      <div class="container pl0 pr0">
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="logo pull-left">
+              <img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/logo_bottom.png" alt="">
+            </div>
+            <div class="content pull-left">
+              <p class="f14">
+                <a href="http://www.ncss.org.cn/" target="_blank">新职业</a>
+                <span class="footer-space">|</span> <a href="http://www.chsi.com.cn/" target="_blank">学信网</a>
+                <span class="footer-space">|</span> <a href="https://cy.ncss.cn/about" target="_blank">关于创业网</a>
+                <span class="footer-space">|</span> <a href="https://cy.ncss.cn/contact" target="_blank">联系我们</a>
+              </p>
+              <p class="mt14">
+                <!-- 主管部门：中华人民共和国教育部<span class="mr100"></span> --> 版权所有：全国高等学校学生信息咨询与就业指导中心
+              </p>
+              <p>京ICP备19004913号</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-right">
+            <div class="footer-logo text-center">
+              <img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/footer_erweima.png" alt="">
+              <p>大赛官方微信号</p>
+            </div>
+            <div class="footer-logo text-center">
+              <img src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/footer_96_96.png" alt="">
+              <p>大创网官方微信平台</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/jquery-1.js"></script>
+    <script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/bootstrap.js"></script>
+    <script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/back_to_top-1.js"></script>
+    <script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/escape-json.js"></script>
+    <script>
+      $(document).ready(function () {
+        var windowHeight = $(window).height(),
+          bodyHeight = $(document.body).height(),
+          dValue = windowHeight - bodyHeight;
+        if (dValue > 0) {
+          dValue += 56;
+          $("#stick").css("height", dValue);
+        }
+        var Sys = {},
+          ua = navigator.userAgent.toLowerCase(),
+          s,
+          mobileAgent = ["iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire"];
+        (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1]: 0;
+        if (Sys.ie) {
+          if (parseFloat(Sys.ie) < 10) {
+            $('#prompts').modal('show');
+          }
+        };
+        for (var i = 0; i < mobileAgent.length; i++) {
+          if (ua.indexOf(mobileAgent[i]) != -1) {
+            $(".mobile-tip").removeClass("hidden");
+            break;
+          }
+        };
+        $(".side-nav").find("[data-index='" + $(".side-nav").attr("data-ac") + "']").addClass("active");
+
+      });
+    </script>
+  </div>
+	<input type="hidden" id="csInv" value="702fad8a2bef69c973fa2ef371b27b44" name="cprmcsrf">
+	<!-- <div class="hidden" id="upfileBegin" th:text="${upfilebegin}"></div> -->
+	<div class="hidden" id="thindustryCode">I,M,O</div>
+	<div class="hidden" id="thcityCode">500113</div>
+	<!-- <div class="hidden" id="upfileEnd" th:text="${upfileend}"></div> -->
+	<div class="hidden" id="structuresIndex">0</div>
+	
+	<div class="hidden" id="investsIndex">0</div>
+	
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/bootstrapValidator.js"></script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/cropper.js"></script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/new-mains.js"></script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/select2.js"></script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/select-ZH-CN.js"></script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/bootstrap-datetimepicker-1.js"></script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/bootstrap-datetimepicker.js"></script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/common.js"></script>
+	<script>
+	   $(function(){
+		   $('[data-toggle="popover"]').popover()
+	   });
+		var tutorErr = "";
+		var EdittutorErr = "";
+		var patentErr = "";
+		var EditpatentErr = "";
+	</script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/new-project-1.js"></script>
+	<script src="%E7%BC%96%E8%BE%91%E9%A1%B9%E7%9B%AE_files/new-edit-project-1.js"></script><div class="datetimepicker datetimepicker-dropdown-bottom-right dropdown-menu" style="left: 0px; z-index: 1070;"><div class="datetimepicker-minutes" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">18 九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="minute">22:00</span><span class="minute">22:05</span><span class="minute active">22:10</span><span class="minute disabled">22:15</span><span class="minute disabled">22:20</span><span class="minute disabled">22:25</span><span class="minute disabled">22:30</span><span class="minute disabled">22:35</span><span class="minute disabled">22:40</span><span class="minute disabled">22:45</span><span class="minute disabled">22:50</span><span class="minute disabled">22:55</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-hours" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">18 九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="hour">0:00</span><span class="hour">1:00</span><span class="hour">2:00</span><span class="hour">3:00</span><span class="hour">4:00</span><span class="hour">5:00</span><span class="hour">6:00</span><span class="hour">7:00</span><span class="hour">8:00</span><span class="hour">9:00</span><span class="hour">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour active">22:00</span><span class="hour disabled">23:00</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr><tr><th class="dow">日</th><th class="dow">一</th><th class="dow">二</th><th class="dow">三</th><th class="dow">四</th><th class="dow">五</th><th class="dow">六</th></tr></thead><tbody><tr><td class="day old">25</td><td class="day old">26</td><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td></tr><tr><td class="day">1</td><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td></tr><tr><td class="day">8</td><td class="day">9</td><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td></tr><tr><td class="day">15</td><td class="day">16</td><td class="day">17</td><td class="day active">18</td><td class="day disabled">19</td><td class="day disabled">20</td><td class="day disabled">21</td></tr><tr><td class="day disabled">22</td><td class="day disabled">23</td><td class="day disabled">24</td><td class="day disabled">25</td><td class="day disabled">26</td><td class="day disabled">27</td><td class="day disabled">28</td></tr><tr><td class="day disabled">29</td><td class="day disabled">30</td><td class="day new disabled">1</td><td class="day new disabled">2</td><td class="day new disabled">3</td><td class="day new disabled">4</td><td class="day new disabled">5</td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="month">一月</span><span class="month">二月</span><span class="month">三月</span><span class="month">四月</span><span class="month">五月</span><span class="month">六月</span><span class="month">七月</span><span class="month">八月</span><span class="month active">九月</span><span class="month disabled">十月</span><span class="month disabled">十一月</span><span class="month disabled">十二月</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2010-2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="year ">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year disabled ">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div></div><div class="datetimepicker datetimepicker-dropdown-bottom-right dropdown-menu" style="left: 0px; z-index: 1080;"><div class="datetimepicker-minutes" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">18 九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="minute">22:00</span><span class="minute">22:05</span><span class="minute active">22:10</span><span class="minute disabled">22:15</span><span class="minute disabled">22:20</span><span class="minute disabled">22:25</span><span class="minute disabled">22:30</span><span class="minute disabled">22:35</span><span class="minute disabled">22:40</span><span class="minute disabled">22:45</span><span class="minute disabled">22:50</span><span class="minute disabled">22:55</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-hours" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">18 九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="hour">0:00</span><span class="hour">1:00</span><span class="hour">2:00</span><span class="hour">3:00</span><span class="hour">4:00</span><span class="hour">5:00</span><span class="hour">6:00</span><span class="hour">7:00</span><span class="hour">8:00</span><span class="hour">9:00</span><span class="hour">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour active">22:00</span><span class="hour disabled">23:00</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr><tr><th class="dow">日</th><th class="dow">一</th><th class="dow">二</th><th class="dow">三</th><th class="dow">四</th><th class="dow">五</th><th class="dow">六</th></tr></thead><tbody><tr><td class="day old">25</td><td class="day old">26</td><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td></tr><tr><td class="day">1</td><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td></tr><tr><td class="day">8</td><td class="day">9</td><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td></tr><tr><td class="day">15</td><td class="day">16</td><td class="day">17</td><td class="day active">18</td><td class="day disabled">19</td><td class="day disabled">20</td><td class="day disabled">21</td></tr><tr><td class="day disabled">22</td><td class="day disabled">23</td><td class="day disabled">24</td><td class="day disabled">25</td><td class="day disabled">26</td><td class="day disabled">27</td><td class="day disabled">28</td></tr><tr><td class="day disabled">29</td><td class="day disabled">30</td><td class="day new disabled">1</td><td class="day new disabled">2</td><td class="day new disabled">3</td><td class="day new disabled">4</td><td class="day new disabled">5</td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="month">一月</span><span class="month">二月</span><span class="month">三月</span><span class="month">四月</span><span class="month">五月</span><span class="month">六月</span><span class="month">七月</span><span class="month">八月</span><span class="month active">九月</span><span class="month disabled">十月</span><span class="month disabled">十一月</span><span class="month disabled">十二月</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2010-2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="year ">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year disabled ">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div></div>
+
+
+<div class="datetimepicker datetimepicker-dropdown-bottom-right dropdown-menu" style="left: 594.4px; z-index: 1090;"><div class="datetimepicker-minutes" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">18 九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="minute">22:00</span><span class="minute">22:05</span><span class="minute active">22:10</span><span class="minute disabled">22:15</span><span class="minute disabled">22:20</span><span class="minute disabled">22:25</span><span class="minute disabled">22:30</span><span class="minute disabled">22:35</span><span class="minute disabled">22:40</span><span class="minute disabled">22:45</span><span class="minute disabled">22:50</span><span class="minute disabled">22:55</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-hours" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">18 九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="hour">0:00</span><span class="hour">1:00</span><span class="hour">2:00</span><span class="hour">3:00</span><span class="hour">4:00</span><span class="hour">5:00</span><span class="hour">6:00</span><span class="hour">7:00</span><span class="hour">8:00</span><span class="hour">9:00</span><span class="hour">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour active">22:00</span><span class="hour disabled">23:00</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr><tr><th class="dow">日</th><th class="dow">一</th><th class="dow">二</th><th class="dow">三</th><th class="dow">四</th><th class="dow">五</th><th class="dow">六</th></tr></thead><tbody><tr><td class="day old">25</td><td class="day old">26</td><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td></tr><tr><td class="day">1</td><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td></tr><tr><td class="day">8</td><td class="day">9</td><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td></tr><tr><td class="day">15</td><td class="day">16</td><td class="day">17</td><td class="day active">18</td><td class="day disabled">19</td><td class="day disabled">20</td><td class="day disabled">21</td></tr><tr><td class="day disabled">22</td><td class="day disabled">23</td><td class="day disabled">24</td><td class="day disabled">25</td><td class="day disabled">26</td><td class="day disabled">27</td><td class="day disabled">28</td></tr><tr><td class="day disabled">29</td><td class="day disabled">30</td><td class="day new disabled">1</td><td class="day new disabled">2</td><td class="day new disabled">3</td><td class="day new disabled">4</td><td class="day new disabled">5</td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="month">一月</span><span class="month">二月</span><span class="month">三月</span><span class="month">四月</span><span class="month">五月</span><span class="month">六月</span><span class="month">七月</span><span class="month">八月</span><span class="month active">九月</span><span class="month disabled">十月</span><span class="month disabled">十一月</span><span class="month disabled">十二月</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2010-2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="year ">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year disabled ">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div></div><div class="datetimepicker datetimepicker-dropdown-bottom-right dropdown-menu" style="left: 0px; z-index: 1100;"><div class="datetimepicker-minutes" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">18 九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="minute">22:00</span><span class="minute">22:05</span><span class="minute active">22:10</span><span class="minute disabled">22:15</span><span class="minute disabled">22:20</span><span class="minute disabled">22:25</span><span class="minute disabled">22:30</span><span class="minute disabled">22:35</span><span class="minute disabled">22:40</span><span class="minute disabled">22:45</span><span class="minute disabled">22:50</span><span class="minute disabled">22:55</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-hours" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">18 九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="hour">0:00</span><span class="hour">1:00</span><span class="hour">2:00</span><span class="hour">3:00</span><span class="hour">4:00</span><span class="hour">5:00</span><span class="hour">6:00</span><span class="hour">7:00</span><span class="hour">8:00</span><span class="hour">9:00</span><span class="hour">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour active">22:00</span><span class="hour disabled">23:00</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">九月 2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr><tr><th class="dow">日</th><th class="dow">一</th><th class="dow">二</th><th class="dow">三</th><th class="dow">四</th><th class="dow">五</th><th class="dow">六</th></tr></thead><tbody><tr><td class="day old">25</td><td class="day old">26</td><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td></tr><tr><td class="day">1</td><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td></tr><tr><td class="day">8</td><td class="day">9</td><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td></tr><tr><td class="day">15</td><td class="day">16</td><td class="day">17</td><td class="day active">18</td><td class="day disabled">19</td><td class="day disabled">20</td><td class="day disabled">21</td></tr><tr><td class="day disabled">22</td><td class="day disabled">23</td><td class="day disabled">24</td><td class="day disabled">25</td><td class="day disabled">26</td><td class="day disabled">27</td><td class="day disabled">28</td></tr><tr><td class="day disabled">29</td><td class="day disabled">30</td><td class="day new disabled">1</td><td class="day new disabled">2</td><td class="day new disabled">3</td><td class="day new disabled">4</td><td class="day new disabled">5</td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="month">一月</span><span class="month">二月</span><span class="month">三月</span><span class="month">四月</span><span class="month">五月</span><span class="month">六月</span><span class="month">七月</span><span class="month">八月</span><span class="month active">九月</span><span class="month disabled">十月</span><span class="month disabled">十一月</span><span class="month disabled">十二月</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datetimepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2010-2019</th><th class="next" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="year ">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year disabled ">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div></div></body></html>
